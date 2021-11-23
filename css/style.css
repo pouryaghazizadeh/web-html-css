@@ -45,3 +45,31 @@ align-items: center;
  #icon-navbar{
      display: none;
  }
+
+@media screen and (max-width: 830px) {
+
+.menue-container{
+
+    position: absolute;
+    top:80px;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+  
+}
+.menue{
+        flex-direction: column;
+        height: 80vh;
+
+}
+
+ #icon-navbar{
+     display: block;
+     position: absolute;
+     right: 20px;
+     font-size: xx-large;
+     background-color: saddlebrown;
+ }
+
+}
+ 
