@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* navbar */
+.navbar-container{
+width: 100vw;
+height: 80px;
+background: cadetblue;
+display: flex;
+align-items: center;
+}
+
+.menue-container{
+    height: 80px;
+    width: ;
+    background: chartreuse;
+}
