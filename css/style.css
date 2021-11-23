@@ -10,10 +10,38 @@ height: 80px;
 background: cadetblue;
 display: flex;
 align-items: center;
-}
 
+}
+.title-web{
+    margin-right: 15px;
+
+}
+/* nav tag */
 .menue-container{
     height: 80px;
-    width: ;
-    background: chartreuse;
+    width:1000px ;
+ 
+    display: flex;
+    justify-content: center;
 }
+/* ul tag */
+.menue{
+    width:70%;
+    background:#b2b2b2;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 5px;
+}
+.link-menu{
+    text-decoration: none;
+    color: #fff;
+    font-size: x-large;
+
+}
+
+/* icon */
+ #icon-navbar{
+     display: none;
+ }
