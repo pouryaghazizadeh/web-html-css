@@ -2,15 +2,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+   font-family: "Courgette", cursive;
+  font-family: "Dancing Script", cursive;
+  font-family: "Hind Madurai", sans-serif;
 }
-/* navbar */
+/* head/navbar */
 .navbar-container {
   width: 100vw;
   height: 80px;
-  background: #333333;
+  background: #111;
   display: flex;
   align-items: center;
-  position: fixed;
+  position: sticky;
   z-index: 6;
 }
 .title-web {
@@ -27,7 +30,7 @@
   transition: all 0.5s ease;
 }
 /* ul tag */
-.menue {
+.menu {
   width: 70%;
 
   list-style: none;
@@ -35,21 +38,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 5px 0 5px;
-  /* background-color: red; */
 }
 .link-menu {
   text-decoration: none;
   color: #fff;
   font-size: x-large;
   cursor: pointer;
-padding: 0.5rem;
+  padding: 0.5rem;
 }
 
-.link-menu:hover{
-    background-color: #3d948b;
-    border:#fff solid 1px;
- 
-
+.link-menu:hover {
+  background-color: #3d948b;
+  border: #fff solid 1px;
 }
 
 /* icon */
@@ -58,8 +58,85 @@ padding: 0.5rem;
   color: #fff;
 }
 
-/* main style  */
-.card-container {
+/* main */
+
+/* animation text */
+.welcome-container {
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h2-container-welcome {
+  display: flex;
+  font-size: 15vw;
+  color: transparent;
+
+ 
+}
+.h2-container-welcome span {
+  animation: text-animate 3s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes text-animate {
+  0% {
+    color: #fff;
+    filter: blur(0.5px) hue-rotate(0deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+      0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+  30%,
+  70% {
+    color: #fff;
+    filter: blur(0.5px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff;
+  }
+  100% {
+    color: transparent;
+    box-shadow: none;
+    filter: blur(0.5px) hue-rotate(0deg);
+  }
+}
+
+/* style big cards */
+.container-big-cards {
+  /* display: flex; */
+  
+}
+
+.big-card-box {
+  /* margin-top: 1rem; */
+  width: 100vw;
+  min-height: 110vh;
+  background: #111;
+  display: flex;
+    /* flex-direction:row; */
+}
+.big-card-box:nth-child(even){
+  flex-direction: row-reverse;
+}
+.text-box-big-card {
+  background-color: #111;
+  color: #fff;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  columns: 120px auto;
+}
+.big-img-card {
+  height: 110vh;
+  width: 50%;
+}
+
+/* .card-container {
   margin-top: 90px;
   position: absolute;
   width: 100vw;
@@ -67,9 +144,8 @@ padding: 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
- 
-}
-.card {
+} */
+/* .card {
   margin-top: 15px;
   width: 300px;
   border: 1px solid #333333;
@@ -79,15 +155,15 @@ padding: 0.5rem;
   justify-content: center;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
   margin: 4px;
-}
-.title-card {
+} */
+/* .title-card {
   font-size: x-large;
   text-align: center;
-}
-.image-card {
+} */
+/* .image-card {
   width: 100%;
   height: 400px;
-}
+} */
 
 /* media query */
 @media screen and (max-width: 830px) {
@@ -99,7 +175,7 @@ padding: 0.5rem;
     background-color: #1e1f25;
     position: absolute;
   }
-  .menue {
+  .menu {
     padding: 20px 0 10px 0;
     flex-direction: column;
     height: 80vh;
@@ -111,10 +187,151 @@ padding: 0.5rem;
     right: 20px;
     font-size: xx-large;
   }
-  .navbar-container{
-      height: 80px;
+  .navbar-container {
+    height: 80px;
   }
-
+}
+@media screen and (max-width: 600px) {
+.big-card-box{
+  flex-direction: column;
+  justify-content: center ;
+}
+.big-img-card{
+  width: 100%;
+}
+.text-box-big-card {
+  width: 100%;
+  height: max-content;
+  padding: 1rem;
 }
 
 
+}
+
+.box {
+  position: relative;
+  max-width: 350px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  padding: 0.4rem;
+  margin: 3rem;
+  overflow: hidden;
+
+  border-radius: 20px;
+  /* box-shadow: 2px 2px 10px 6px rgb(0, 0, 0.1); */
+  /* border: 1px solid black; */
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 250%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+.box:after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 20px;
+  background: rgb(0, 0, 0.5);
+  color: #fff;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.image-card2 {
+  z-index: 3;
+  height: 200px;
+  max-width: 480px;
+}
+
+.desc-card {
+  color: #fff;
+
+  text-align: center;
+  z-index: 3;
+  font-size: 1.5rem;
+}
+/* related to login */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+
+  width: 400px;
+  height: 500px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.input-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+.login-title {
+  font-size: xx-large;
+  text-align: center;
+
+  background: -webkit-linear-gradient(
+    103deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-input {
+  margin-top: 20px;
+  height: 45px;
+  outline: none;
+}
+
+.btn-login {
+  width: 95%;
+  height: 40px;
+  font-size: x-large;
+  background-color: #4cc5c6;
+  border: 1px solid black;
+}
+.btn-login:hover {
+  background-color: #13cbfa;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 100%;
+    height: 100%;
+  }
+  .login-title {
+    font-size: x-large;
+  }
+  .login-input {
+    text-align: center;
+  }
+}
