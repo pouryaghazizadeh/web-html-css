@@ -8,38 +8,52 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/style.css" />
-            <link
+    <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Hind+Madurai:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-          <!-- header website -->
     <header class="navbar-container">
-      <h1 class="title-web">MyWeb</h1>
-      <nav class="menue-container">
+      <a href="./index.html" class="title-web">Music stock</a>
+      <nav class="menu-container">
         <ul class="menu">
-          <li><a href="#" class="link-menu">Service</a></li>
-          <li><a href="#" class="link-menu">About us</a></li>
           <li><a href="/html/login.html" class="link-menu">Login</a></li>
-          <li><a href="#" class="link-menu">Shop</a></li>
+          <li><a href="../html/shop.html" class="link-menu">Shop</a></li>
         </ul>
       </nav>
-      <i class="fas fa-bars  " id="icon-navbar"></i>
+      <i class="fas fa-bars" id="icon-navbar"></i>
     </header>
-    <main class="login-container">
-
-      <form class="form-container">
-          <h3 class="login-title">Welcome Back!</h3>
-        <div class="input-container">
-          <input class="login-input" type="text" placeholder="UsserName" />
-          <input  class="login-input" type="password" placeholder="Password" />
-        </div>
-        <button class="btn-login">Click</button>
+    <main class="container-login-page">
+      <form class="container-form">
+        <h2 class="h2-container-welcome">
+          <span style="--i: 1">W</span>
+          <span style="--i: 2">e</span>
+          <span style="--i: 3">l</span>
+          <span style="--i: 4">c</span>
+          <span style="--i: 5">o</span>
+          <span style="--i: 6">m</span>
+          <span style="--i: 6">e</span>
+          <span style="--i: 7; margin-left: 2rem">B</span>
+          <span style="--i: 8">a</span>
+          <span style="--i: 9">c</span>
+          <span style="--i: 10">k</span>
+        </h2>
+        <input placeholder="User name" class="login-input" />
+        <input placeholder="Password" class="login-input" />
+        <button class="btn">submit</button>
       </form>
     </main>
+    <footer class="footer">this app created by pourya</footer>
 
     <script src="../js/app.js" async defer></script>
   </body>

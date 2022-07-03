@@ -1,20 +1,14 @@
 const iconBar = document.querySelector("#icon-navbar");
 
-const menue = document.querySelector(".menue-container");
+const menu = document.querySelector(".menu-container");
 
+let mood = false;
 
-let mood = false
+iconBar.addEventListener("click", (e) => {
+  mood = !mood;
+  mood
+    ? (iconBar.classList = "fal fa-bars")
+    : (iconBar.classList = "fal fa-times");
 
-
-iconBar.addEventListener("click",(e)=>{
-    mood = !mood
-   mood
-      ? (iconBar.classList = "fal fa-bars")
-      : (iconBar.classList = "fal fa-times");
-
-      mood ?(menue.style.left = " -100%"): (menue.style.left = " 0%") ;
-
-
-
+  mood ? (menu.style.left = " -100%") : (menu.style.left = " 0%");
 });
-
